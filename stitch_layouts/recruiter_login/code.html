@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, viewport-fit=cover" name="viewport"/>
+<title>Zero-Paper | Recruiter Login</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f7f9fb;
+        }
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "secondary-fixed": "#dbe1ff",
+                      "surface-container-lowest": "#ffffff",
+                      "on-error": "#ffffff",
+                      "on-secondary-fixed-variant": "#003ea8",
+                      "error": "#ba1a1a",
+                      "on-background": "#191c1e",
+                      "primary-container": "#0d1c32",
+                      "on-secondary-container": "#fefcff",
+                      "on-primary-container": "#76849f",
+                      "outline-variant": "#c5c6cd",
+                      "surface-container-high": "#e6e8ea",
+                      "on-primary-fixed": "#0d1c32",
+                      "on-primary-fixed-variant": "#39475f",
+                      "on-surface": "#191c1e",
+                      "on-tertiary-fixed-variant": "#004e5c",
+                      "surface-bright": "#f7f9fb",
+                      "surface-dim": "#d8dadc",
+                      "on-primary": "#ffffff",
+                      "on-secondary-fixed": "#00174b",
+                      "surface": "#f7f9fb",
+                      "background": "#f7f9fb",
+                      "tertiary-fixed": "#acedff",
+                      "tertiary-container": "#001f26",
+                      "on-surface-variant": "#44474d",
+                      "secondary-fixed-dim": "#b4c5ff",
+                      "outline": "#75777e",
+                      "on-tertiary": "#ffffff",
+                      "surface-container": "#eceef0",
+                      "primary-fixed-dim": "#b9c7e4",
+                      "on-secondary": "#ffffff",
+                      "primary-fixed": "#d6e3ff",
+                      "secondary-container": "#316bf3",
+                      "on-error-container": "#93000a",
+                      "tertiary": "#000000",
+                      "secondary": "#0051d5",
+                      "inverse-primary": "#b9c7e4",
+                      "inverse-surface": "#2d3133",
+                      "on-tertiary-fixed": "#001f26",
+                      "surface-variant": "#e0e3e5",
+                      "primary": "#000000",
+                      "error-container": "#ffdad6",
+                      "inverse-on-surface": "#eff1f3",
+                      "on-tertiary-container": "#0090a9",
+                      "surface-tint": "#515f78",
+                      "surface-container-highest": "#e0e3e5",
+                      "surface-container-low": "#f2f4f6",
+                      "tertiary-fixed-dim": "#4cd7f6"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "margin-mobile": "20px",
+                      "base": "4px",
+                      "gutter": "16px",
+                      "stack-md": "16px",
+                      "margin-desktop": "40px",
+                      "stack-sm": "8px",
+                      "stack-lg": "24px"
+              },
+              "fontFamily": {
+                      "label-md": ["Inter"],
+                      "body-sm": ["Inter"],
+                      "headline-lg": ["Inter"],
+                      "headline-md": ["Inter"],
+                      "headline-lg-mobile": ["Inter"],
+                      "body-lg": ["Inter"],
+                      "label-sm": ["Inter"]
+              },
+              "fontSize": {
+                      "label-md": ["14px", {"lineHeight": "16px", "letterSpacing": "0.01em", "fontWeight": "500"}],
+                      "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                      "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                      "headline-md": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+                      "headline-lg-mobile": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                      "body-lg": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                      "label-sm": ["12px", {"lineHeight": "16px", "fontWeight": "600"}]
+              }
+            },
+          },
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-surface min-h-screen flex flex-col md:flex-row overflow-x-hidden">
+<!-- Hero/Branding Side (Desktop Only) -->
+<div class="hidden md:flex md:w-1/2 lg:w-3/5 bg-primary-container relative overflow-hidden items-center justify-center p-margin-desktop">
+<!-- Background Abstract Pattern -->
+<div class="absolute inset-0 opacity-20">
+<div class="absolute top-[-10%] left-[-10%] w-[60%] h-[60%] bg-secondary rounded-full blur-[120px]"></div>
+<div class="absolute bottom-[-10%] right-[-10%] w-[50%] h-[50%] bg-tertiary-fixed-dim rounded-full blur-[100px]"></div>
+</div>
+<div class="relative z-10 max-w-lg">
+<h1 class="font-headline-lg text-headline-lg text-on-secondary-container mb-stack-md">Elevate Your Talent Acquisition.</h1>
+<p class="font-body-lg text-body-lg text-on-primary-container mb-stack-lg">Connect with verified candidates instantly. Our paperless recruitment ecosystem ensures data integrity and high-speed hiring for enterprise leaders.</p>
+<div class="grid grid-cols-2 gap-gutter">
+<div class="bg-surface-container-lowest/5 border border-white/10 p-stack-md rounded-xl backdrop-blur-sm">
+<span class="material-symbols-outlined text-secondary mb-base">verified</span>
+<h3 class="font-label-md text-label-md text-surface-container-lowest">Verified IDs</h3>
+<p class="font-body-sm text-body-sm text-on-primary-container opacity-80">Instant credential checks via blockchain.</p>
+</div>
+<div class="bg-surface-container-lowest/5 border border-white/10 p-stack-md rounded-xl backdrop-blur-sm">
+<span class="material-symbols-outlined text-secondary mb-base">bolt</span>
+<h3 class="font-label-md text-label-md text-surface-container-lowest">Fast-Track</h3>
+<p class="font-body-sm text-body-sm text-on-primary-container opacity-80">Reduce time-to-hire by up to 60%.</p>
+</div>
+</div>
+</div>
+<img alt="Office background" class="absolute inset-0 w-full h-full object-cover mix-blend-overlay opacity-30" data-alt="A high-end, modern corporate office environment with floor-to-ceiling glass windows and sleek minimalist furniture. The scene is bathed in cool blue and white tones, reflecting a professional SaaS aesthetic. Soft ambient lighting illuminates a team of focused professionals working in a tech-driven atmosphere. The mood is sophisticated, authoritative, and visionary, perfectly aligning with a premium recruitment platform branding." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAnuS1IYBxhqRPtKwIQEs26XFXs3Gtr-7sgkY0VqywNG0dzjiPfyjKDdmuma0ufMQQOrvcdqmHM3kthFfzG1-zqUe62pJaKo9a7H5yiCtfMHA2ikkC0RxilX2fX_okbb7UEIYH0gUAvpanQ9Z3l1C4HvqQ9_AWaLET66v2-yhmGrJpDkAplQ00nDCOC-F0ekAHay7QKhrAL7-z7KTKOhDDU5YQvVlI58kMUtZgjtuWrfAbOSyMKUT3eW7Lro5Z-oI2RpsRnpL6eILDu"/>
+</div>
+<!-- Login Form Side -->
+<main class="flex-1 flex flex-col min-h-screen">
+<!-- Mobile Header (Logo Only) -->
+<header class="md:hidden flex items-center h-16 px-margin-mobile">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 bg-secondary rounded-lg flex items-center justify-center">
+<span class="material-symbols-outlined text-white text-lg">description</span>
+</div>
+<span class="font-headline-md text-headline-md font-bold text-secondary">Zero-Paper</span>
+</div>
+</header>
+<div class="flex-1 flex items-center justify-center p-margin-mobile py-stack-lg">
+<div class="w-full max-w-md">
+<div class="mb-stack-lg text-center md:text-left">
+<div class="hidden md:flex items-center gap-2 mb-stack-lg">
+<div class="w-10 h-10 bg-secondary rounded-xl flex items-center justify-center">
+<span class="material-symbols-outlined text-white">description</span>
+</div>
+<span class="font-headline-md text-headline-md font-bold text-secondary">Zero-Paper</span>
+</div>
+<h2 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface mb-base">Recruiter Login</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant">Access your enterprise dashboard</p>
+</div>
+<!-- Form Section -->
+<form class="space-y-stack-md" onsubmit="event.preventDefault();">
+<div class="space-y-base">
+<label class="font-label-md text-label-md text-on-surface-variant block" for="email">Company Email</label>
+<div class="relative group">
+<div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+<span class="material-symbols-outlined text-on-surface-variant group-focus-within:text-secondary transition-colors">mail</span>
+</div>
+<input class="block w-full pl-10 pr-3 py-3 bg-surface-container-low border-transparent rounded-lg focus:ring-2 focus:ring-secondary/20 focus:border-secondary transition-all font-body-lg text-body-lg" id="email" name="email" placeholder="alex.rivers@enterprise.com" type="email"/>
+</div>
+</div>
+<div class="space-y-base">
+<div class="flex justify-between items-center">
+<label class="font-label-md text-label-md text-on-surface-variant block" for="password">Password</label>
+<a class="font-label-sm text-label-sm text-secondary hover:underline" href="#">Forgot password?</a>
+</div>
+<div class="relative group">
+<div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+<span class="material-symbols-outlined text-on-surface-variant group-focus-within:text-secondary transition-colors">lock</span>
+</div>
+<input class="block w-full pl-10 pr-10 py-3 bg-surface-container-low border-transparent rounded-lg focus:ring-2 focus:ring-secondary/20 focus:border-secondary transition-all font-body-lg text-body-lg" id="password" name="password" placeholder="••••••••" type="password"/>
+<button class="absolute inset-y-0 right-0 pr-3 flex items-center text-on-surface-variant hover:text-on-surface" type="button">
+<span class="material-symbols-outlined">visibility</span>
+</button>
+</div>
+</div>
+<div class="flex items-center gap-2 py-base">
+<input class="w-5 h-5 rounded border-outline-variant text-secondary focus:ring-secondary/20" id="remember" type="checkbox"/>
+<label class="font-body-sm text-body-sm text-on-surface-variant" for="remember">Remember this device</label>
+</div>
+<button class="w-full bg-secondary text-white py-4 rounded-xl font-headline-md text-headline-md hover:shadow-lg active:scale-[0.98] transition-all flex items-center justify-center gap-2">
+<span>Sign In</span>
+<span class="material-symbols-outlined">login</span>
+</button>
+</form>
+<!-- Divider -->
+<div class="relative my-stack-lg">
+<div class="absolute inset-0 flex items-center">
+<div class="w-full border-t border-outline-variant"></div>
+</div>
+<div class="relative flex justify-center text-label-sm text-label-sm">
+<span class="bg-background px-4 text-on-surface-variant uppercase tracking-widest">Or continue with</span>
+</div>
+</div>
+<!-- Social/SSO Buttons -->
+<div class="grid grid-cols-2 gap-gutter">
+<button class="flex items-center justify-center gap-2 py-3 px-4 border border-outline-variant rounded-lg font-label-md text-label-md hover:bg-surface-container-low transition-colors">
+<img alt="Google" class="w-5 h-5 grayscale group-hover:grayscale-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCQOVM06INTt47zFhvmbjIFZq3DyEpcnMxEJrj0A5lXxHzkz_5zpfmKu_1aQWwGxMEenbyiBGD8rxlo6R2WWDkCifSXPz2aZifYP-AKIwJGD6c-KJ1qMMn1uKk279Vq9tllS08266Reb7PJdwxd5zGiq5kD_wLHLcJxUJ9z8CyM0Iu13iGXIYxBHHn5hwlNq4xywNMk_gMd7IKWz9enwMUaiGoM9uK16Cc-5ZNBIeJY75i7QkzyRs3qOwzJQmf7BnnEIc_5drE7qoEN"/>
+<span>Google</span>
+</button>
+<button class="flex items-center justify-center gap-2 py-3 px-4 border border-outline-variant rounded-lg font-label-md text-label-md hover:bg-surface-container-low transition-colors">
+<span class="material-symbols-outlined text-on-surface">apartment</span>
+<span>SSO</span>
+</button>
+</div>
+<!-- Bottom Text -->
+<p class="mt-stack-lg text-center font-body-sm text-body-sm text-on-surface-variant">
+                    Don't have an enterprise account? <a class="text-secondary font-bold hover:underline" href="#">Request a Demo</a>
+</p>
+</div>
+</div>
+<!-- Footer -->
+<footer class="p-margin-mobile border-t border-outline-variant/30 flex flex-col md:flex-row justify-between gap-base">
+<span class="font-label-sm text-label-sm text-on-surface-variant">© 2024 Zero-Paper Inc. All rights reserved.</span>
+<div class="flex gap-stack-md">
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-secondary" href="#">Privacy Policy</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-secondary" href="#">Security Standards</a>
+</div>
+</footer>
+</main>
+<!-- Success Toast (Hidden by default) -->
+<div class="fixed bottom-margin-mobile left-1/2 -translate-x-1/2 glass-panel border border-secondary/20 px-stack-lg py-stack-md rounded-full shadow-2xl flex items-center gap-3 opacity-0 pointer-events-none transition-all duration-500 translate-y-10 z-[100]" id="toast">
+<div class="w-8 h-8 bg-secondary rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-white text-sm" data-weight="fill">check_circle</span>
+</div>
+<p class="font-label-md text-label-md text-on-surface">Welcome back, Alex.</p>
+</div>
+<script>
+        // Micro-interaction: Login Button Feedback
+        const loginBtn = document.querySelector('button.bg-secondary');
+        const toast = document.getElementById('toast');
+
+        loginBtn.addEventListener('click', () => {
+            loginBtn.innerHTML = `<span class="animate-spin material-symbols-outlined">progress_activity</span>`;
+            
+            setTimeout(() => {
+                loginBtn.innerHTML = `<span>Sign In</span><span class="material-symbols-outlined">login</span>`;
+                toast.classList.remove('opacity-0', 'pointer-events-none', 'translate-y-10');
+                toast.classList.add('opacity-100', 'translate-y-0');
+                
+                setTimeout(() => {
+                    toast.classList.add('opacity-0', 'translate-y-10');
+                }, 3000);
+            }, 1500);
+        });
+
+        // Floating Effect for background (Desktop)
+        document.addEventListener('mousemove', (e) => {
+            const blobs = document.querySelectorAll('.md\\:flex .blur-\\[120px\\], .md\\:flex .blur-\\[100px\\]');
+            const x = (e.clientX / window.innerWidth) * 20;
+            const y = (e.clientY / window.innerHeight) * 20;
+            
+            blobs.forEach((blob, index) => {
+                const shift = index === 0 ? 1 : -1;
+                blob.style.transform = `translate(${x * shift}px, ${y * shift}px)`;
+            });
+        });
+    </script>
+</body></html>

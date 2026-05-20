@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-header {
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        .card-shadow {
+            box-shadow: 0px 4px 20px rgba(10, 25, 47, 0.05);
+        }
+        .sticky-action-blur {
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            background: rgba(255, 255, 255, 0.8);
+        }
+        body {
+            background-color: #f7f9fb;
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "secondary-fixed": "#dbe1ff",
+                    "surface-container-lowest": "#ffffff",
+                    "on-error": "#ffffff",
+                    "on-secondary-fixed-variant": "#003ea8",
+                    "error": "#ba1a1a",
+                    "on-background": "#191c1e",
+                    "primary-container": "#0d1c32",
+                    "on-secondary-container": "#fefcff",
+                    "on-primary-container": "#76849f",
+                    "outline-variant": "#c5c6cd",
+                    "surface-container-high": "#e6e8ea",
+                    "on-primary-fixed": "#0d1c32",
+                    "on-primary-fixed-variant": "#39475f",
+                    "on-surface": "#191c1e",
+                    "on-tertiary-fixed-variant": "#004e5c",
+                    "surface-bright": "#f7f9fb",
+                    "surface-dim": "#d8dadc",
+                    "on-primary": "#ffffff",
+                    "on-secondary-fixed": "#00174b",
+                    "surface": "#f7f9fb",
+                    "background": "#f7f9fb",
+                    "tertiary-fixed": "#acedff",
+                    "tertiary-container": "#001f26",
+                    "on-surface-variant": "#44474d",
+                    "secondary-fixed-dim": "#b4c5ff",
+                    "outline": "#75777e",
+                    "on-tertiary": "#ffffff",
+                    "surface-container": "#eceef0",
+                    "primary-fixed-dim": "#b9c7e4",
+                    "on-secondary": "#ffffff",
+                    "primary-fixed": "#d6e3ff",
+                    "secondary-container": "#316bf3",
+                    "on-error-container": "#93000a",
+                    "tertiary": "#000000",
+                    "secondary": "#0051d5",
+                    "inverse-primary": "#b9c7e4",
+                    "inverse-surface": "#2d3133",
+                    "on-tertiary-fixed": "#001f26",
+                    "surface-variant": "#e0e3e5",
+                    "primary": "#000000",
+                    "error-container": "#ffdad6",
+                    "inverse-on-surface": "#eff1f3",
+                    "on-tertiary-container": "#0090a9",
+                    "surface-tint": "#515f78",
+                    "surface-container-highest": "#e0e3e5",
+                    "surface-container-low": "#f2f4f6",
+                    "tertiary-fixed-dim": "#4cd7f6"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "margin-mobile": "20px",
+                    "base": "4px",
+                    "gutter": "16px",
+                    "stack-md": "16px",
+                    "margin-desktop": "40px",
+                    "stack-sm": "8px",
+                    "stack-lg": "24px"
+            },
+            "fontFamily": {
+                    "label-md": ["Inter"],
+                    "body-sm": ["Inter"],
+                    "headline-lg": ["Inter"],
+                    "headline-md": ["Inter"],
+                    "headline-lg-mobile": ["Inter"],
+                    "body-lg": ["Inter"],
+                    "label-sm": ["Inter"]
+            },
+            "fontSize": {
+                    "label-md": ["14px", {"lineHeight": "16px", "letterSpacing": "0.01em", "fontWeight": "500"}],
+                    "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "headline-md": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+                    "headline-lg-mobile": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                    "body-lg": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "label-sm": ["12px", {"lineHeight": "16px", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-surface min-h-screen pb-32">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 flex justify-between items-center px-margin-mobile h-16 backdrop-blur-xl bg-surface/70 dark:bg-surface-dim/70">
+<div class="flex items-center gap-stack-sm">
+<button class="material-symbols-outlined text-secondary hover:bg-surface-container-high transition-colors p-2 rounded-full active:scale-95 duration-100">arrow_back</button>
+<span class="font-headline-md text-headline-md font-bold text-secondary">Candidate Profile</span>
+</div>
+<div class="flex items-center gap-stack-md">
+<button class="material-symbols-outlined text-on-surface-variant hover:bg-surface-container-high transition-colors p-2 rounded-full">share</button>
+<button class="material-symbols-outlined text-on-surface-variant hover:bg-surface-container-high transition-colors p-2 rounded-full">more_vert</button>
+</div>
+</header>
+<main class="pt-20 px-margin-mobile md:max-w-5xl md:mx-auto">
+<!-- Header Profile Card -->
+<section class="bg-surface-container-lowest rounded-xl border border-outline-variant p-stack-lg card-shadow mb-stack-lg">
+<div class="flex flex-col md:flex-row items-center md:items-start gap-stack-lg">
+<div class="relative w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden border-4 border-secondary-fixed">
+<img alt="Alex Rivers" class="w-full h-full object-cover" data-alt="A professional headshot of a young male computer science student with a friendly expression. He is wearing a clean, modern navy blazer over a white shirt. The background is a soft-focus office environment with natural sunlight and minimalist decor, maintaining a high-key, clean professional aesthetic consistent with a premium corporate SaaS platform." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAKnC8J-RuEnTyGffHAsyEoW0uwsARJAf5nsciaffjDLfStjib63Xtu2u3rpUBskpeiwXjOROgWt3OdYBJJ4r861mQDk7NW6Z7k32o8uDF2tf9T2pdC3TsNIoqYbyOwlZuI50hLVV14P1b20M39wDa1YMgAKeus9ZM54K6a_iP6_gD_P3_BCb9K3Pt5GO75KoYpmw-rS-0U0hHUG4KhOAmkc8jglNphQvpCAkT24lqK8Y-lneP19y8R6gZ9w9o1wbgSpAMrmyxXZYXa"/>
+</div>
+<div class="flex-1 text-center md:text-left">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-stack-sm">
+<h1 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface">Alex Rivers</h1>
+<span class="inline-flex items-center px-3 py-1 bg-secondary-fixed text-on-secondary-fixed-variant rounded-full font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px] mr-1" style="font-variation-settings: 'FILL' 1;">verified</span>
+                            Verified Student ID
+                        </span>
+</div>
+<p class="font-body-lg text-body-lg text-on-surface-variant mt-1">Computer Science Senior @ Stanford University</p>
+<div class="flex flex-wrap justify-center md:justify-start gap-stack-sm mt-stack-md">
+<div class="flex items-center text-on-surface-variant font-label-md text-label-md">
+<span class="material-symbols-outlined text-secondary mr-1">location_on</span> Palo Alto, CA
+                        </div>
+<div class="hidden md:block w-px h-4 bg-outline-variant self-center mx-2"></div>
+<div class="flex items-center text-on-surface-variant font-label-md text-label-md">
+<span class="material-symbols-outlined text-secondary mr-1">mail</span> a.rivers@stanford.edu
+                        </div>
+</div>
+<div class="mt-stack-lg flex flex-wrap gap-stack-sm justify-center md:justify-start">
+<span class="px-3 py-1 bg-surface-container rounded-lg border border-outline-variant text-on-surface-variant font-label-sm text-label-sm">Python</span>
+<span class="px-3 py-1 bg-surface-container rounded-lg border border-outline-variant text-on-surface-variant font-label-sm text-label-sm">React</span>
+<span class="px-3 py-1 bg-surface-container rounded-lg border border-outline-variant text-on-surface-variant font-label-sm text-label-sm">AWS</span>
+<span class="px-3 py-1 bg-surface-container rounded-lg border border-outline-variant text-on-surface-variant font-label-sm text-label-sm">Machine Learning</span>
+<span class="px-3 py-1 bg-secondary-container text-on-secondary-container rounded-lg font-label-sm text-label-sm">+4 more</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Bento Grid Content -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-stack-lg">
+<!-- Main Content Area -->
+<div class="md:col-span-2 space-y-stack-lg">
+<!-- Education -->
+<article class="bg-surface-container-lowest rounded-xl border border-outline-variant p-stack-lg card-shadow">
+<h2 class="font-headline-md text-headline-md text-secondary mb-stack-md flex items-center">
+<span class="material-symbols-outlined mr-2">school</span> Education
+                    </h2>
+<div class="space-y-stack-md">
+<div class="flex gap-stack-md">
+<div class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center border border-outline-variant shrink-0">
+<span class="material-symbols-outlined text-on-surface-variant">account_balance</span>
+</div>
+<div>
+<h3 class="font-label-md text-label-md font-bold text-on-surface">Stanford University</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">B.S. Computer Science • GPA 3.92</p>
+<p class="font-label-sm text-label-sm text-on-primary-container mt-1">Sep 2020 — Jun 2024</p>
+</div>
+</div>
+</div>
+</article>
+<!-- Projects -->
+<article class="bg-surface-container-lowest rounded-xl border border-outline-variant p-stack-lg card-shadow">
+<div class="flex justify-between items-center mb-stack-md">
+<h2 class="font-headline-md text-headline-md text-secondary flex items-center">
+<span class="material-symbols-outlined mr-2">folder_open</span> Featured Projects
+                        </h2>
+</div>
+<div class="space-y-stack-lg">
+<div class="group cursor-pointer">
+<h3 class="font-label-md text-label-md font-bold text-on-surface group-hover:text-secondary transition-colors">NeuroFlow AI Engine</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 leading-relaxed">
+                                Developed a real-time neural network visualization tool using WebGL and PyTorch. Reduced inference latency by 24% through custom kernel optimization.
+                            </p>
+<div class="flex gap-stack-sm mt-stack-sm">
+<span class="text-xs font-semibold text-secondary">React</span>
+<span class="text-xs font-semibold text-secondary">Three.js</span>
+<span class="text-xs font-semibold text-secondary">Python</span>
+</div>
+</div>
+<div class="w-full h-px bg-outline-variant"></div>
+<div class="group cursor-pointer">
+<h3 class="font-label-md text-label-md font-bold text-on-surface group-hover:text-secondary transition-colors">EcoTrack Mobile App</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 leading-relaxed">
+                                A carbon footprint tracking application used by over 5,000 campus students. Integrated with Stripe for carbon offset micro-transactions.
+                            </p>
+<div class="flex gap-stack-sm mt-stack-sm">
+<span class="text-xs font-semibold text-secondary">React Native</span>
+<span class="text-xs font-semibold text-secondary">Node.js</span>
+</div>
+</div>
+</div>
+</article>
+</div>
+<!-- Sidebar Info Area -->
+<div class="space-y-stack-lg">
+<!-- Quick Stats / Resume Link -->
+<article class="bg-surface-container-lowest rounded-xl border border-outline-variant p-stack-lg card-shadow">
+<h2 class="font-label-md text-label-md font-bold text-on-surface mb-stack-md">Recruitment Assets</h2>
+<a class="flex items-center justify-between p-3 rounded-lg bg-surface hover:bg-surface-container transition-colors border border-outline-variant group" href="#">
+<div class="flex items-center gap-stack-sm">
+<span class="material-symbols-outlined text-secondary">description</span>
+<span class="font-label-md text-label-md text-on-surface">alex_rivers_resume.pdf</span>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant group-hover:translate-y-1 transition-transform">download</span>
+</a>
+<div class="mt-stack-lg space-y-stack-sm">
+<div class="flex justify-between font-label-sm text-label-sm">
+<span class="text-on-surface-variant">Profile View Velocity</span>
+<span class="text-secondary font-bold">High (42/wk)</span>
+</div>
+<div class="w-full h-1.5 bg-surface-container rounded-full overflow-hidden">
+<div class="w-[85%] h-full bg-secondary"></div>
+</div>
+<p class="text-[11px] text-on-primary-container italic">Top 5% candidate in the San Francisco region this week.</p>
+</div>
+</article>
+<!-- Soft Skills Chip Cloud -->
+<article class="bg-surface-container-lowest rounded-xl border border-outline-variant p-stack-lg card-shadow">
+<h2 class="font-label-md text-label-md font-bold text-on-surface mb-stack-md">Candidate Traits</h2>
+<div class="flex flex-wrap gap-2">
+<span class="px-2 py-1 bg-tertiary-fixed text-on-tertiary-fixed rounded-full text-[12px] font-medium">Leadership</span>
+<span class="px-2 py-1 bg-tertiary-fixed text-on-tertiary-fixed rounded-full text-[12px] font-medium">Public Speaking</span>
+<span class="px-2 py-1 bg-tertiary-fixed text-on-tertiary-fixed rounded-full text-[12px] font-medium">Agile Scrum</span>
+<span class="px-2 py-1 bg-tertiary-fixed text-on-tertiary-fixed rounded-full text-[12px] font-medium">Remote Ready</span>
+</div>
+</article>
+<!-- Quick Action Note -->
+<div class="p-stack-md bg-secondary-fixed text-on-secondary-fixed rounded-xl border border-secondary-fixed-dim">
+<p class="font-label-sm text-label-sm flex items-start gap-2">
+<span class="material-symbols-outlined text-[18px]">lightbulb</span>
+                        Alex is looking for Full-Stack or AI-specific roles for Summer 2024.
+                    </p>
+</div>
+</div>
+</div>
+</main>
+<!-- Sticky Bottom Action Bar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 sticky-action-blur border-t border-outline-variant px-margin-mobile py-4 pb-safe-area flex flex-col md:flex-row items-center gap-stack-md md:justify-center">
+<div class="flex gap-stack-md w-full md:w-auto">
+<button class="flex-1 md:w-48 h-12 flex items-center justify-center gap-2 border border-secondary text-secondary rounded-full font-label-md text-label-md hover:bg-secondary-fixed transition-all active:scale-95 duration-150">
+<span class="material-symbols-outlined">bookmark</span>
+                Save Candidate
+            </button>
+<button class="flex-1 md:w-48 h-12 flex items-center justify-center gap-2 border border-outline-variant bg-surface text-on-surface-variant rounded-full font-label-md text-label-md hover:bg-surface-container-high transition-all active:scale-95 duration-150" id="markInterested">
+<span class="material-symbols-outlined" id="interestIcon">star</span>
+<span id="interestText">Mark Interested</span>
+</button>
+</div>
+<button class="w-full md:w-64 h-12 bg-secondary text-on-secondary rounded-full font-label-md text-label-md shadow-lg hover:opacity-90 transition-all flex items-center justify-center gap-2 active:scale-90 duration-150">
+<span class="material-symbols-outlined">chat_bubble</span>
+            Contact Candidate
+        </button>
+</nav>
+<script>
+        // Micro-interaction for marking as interested
+        const markBtn = document.getElementById('markInterested');
+        const icon = document.getElementById('interestIcon');
+        const text = document.getElementById('interestText');
+        let isInterested = false;
+
+        markBtn.addEventListener('click', () => {
+            isInterested = !isInterested;
+            if (isInterested) {
+                markBtn.classList.remove('bg-surface', 'text-on-surface-variant');
+                markBtn.classList.add('bg-tertiary-fixed', 'text-on-tertiary-fixed', 'border-tertiary-fixed-dim');
+                icon.style.fontVariationSettings = "'FILL' 1";
+                text.textContent = 'Interested';
+            } else {
+                markBtn.classList.add('bg-surface', 'text-on-surface-variant');
+                markBtn.classList.remove('bg-tertiary-fixed', 'text-on-tertiary-fixed', 'border-tertiary-fixed-dim');
+                icon.style.fontVariationSettings = "'FILL' 0";
+                text.textContent = 'Mark Interested';
+            }
+        });
+
+        // Simple scroll reveal for header glass effect
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 20) {
+                header.classList.add('shadow-md');
+            } else {
+                header.classList.remove('shadow-md');
+            }
+        });
+    </script>
+</body></html>

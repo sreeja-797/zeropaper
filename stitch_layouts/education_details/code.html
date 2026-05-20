@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, viewport-fit=cover" name="viewport"/>
+<title>Zero-Paper | Education Details</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind Configuration -->
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                "secondary-fixed": "#dbe1ff",
+                "surface-container-lowest": "#ffffff",
+                "on-error": "#ffffff",
+                "on-secondary-fixed-variant": "#003ea8",
+                "error": "#ba1a1a",
+                "on-background": "#191c1e",
+                "primary-container": "#0d1c32",
+                "on-secondary-container": "#fefcff",
+                "on-primary-container": "#76849f",
+                "outline-variant": "#c5c6cd",
+                "surface-container-high": "#e6e8ea",
+                "on-primary-fixed": "#0d1c32",
+                "on-primary-fixed-variant": "#39475f",
+                "on-surface": "#191c1e",
+                "on-tertiary-fixed-variant": "#004e5c",
+                "surface-bright": "#f7f9fb",
+                "surface-dim": "#d8dadc",
+                "on-primary": "#ffffff",
+                "on-secondary-fixed": "#00174b",
+                "surface": "#f7f9fb",
+                "background": "#f7f9fb",
+                "tertiary-fixed": "#acedff",
+                "tertiary-container": "#001f26",
+                "on-surface-variant": "#44474d",
+                "secondary-fixed-dim": "#b4c5ff",
+                "outline": "#75777e",
+                "on-tertiary": "#ffffff",
+                "surface-container": "#eceef0",
+                "primary-fixed-dim": "#b9c7e4",
+                "on-secondary": "#ffffff",
+                "primary-fixed": "#d6e3ff",
+                "secondary-container": "#316bf3",
+                "on-error-container": "#93000a",
+                "tertiary": "#000000",
+                "secondary": "#0051d5",
+                "inverse-primary": "#b9c7e4",
+                "inverse-surface": "#2d3133",
+                "on-tertiary-fixed": "#001f26",
+                "surface-variant": "#e0e3e5",
+                "primary": "#000000",
+                "error-container": "#ffdad6",
+                "inverse-on-surface": "#eff1f3",
+                "on-tertiary-container": "#0090a9",
+                "surface-tint": "#515f78",
+                "surface-container-highest": "#e0e3e5",
+                "surface-container-low": "#f2f4f6",
+                "tertiary-fixed-dim": "#4cd7f6"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.25rem",
+                "lg": "0.5rem",
+                "xl": "0.75rem",
+                "full": "9999px"
+            },
+            "spacing": {
+                "margin-mobile": "20px",
+                "base": "4px",
+                "gutter": "16px",
+                "stack-md": "16px",
+                "margin-desktop": "40px",
+                "stack-sm": "8px",
+                "stack-lg": "24px"
+            },
+            "fontFamily": {
+                "label-md": ["Inter"],
+                "body-sm": ["Inter"],
+                "headline-lg": ["Inter"],
+                "headline-md": ["Inter"],
+                "headline-lg-mobile": ["Inter"],
+                "body-lg": ["Inter"],
+                "label-sm": ["Inter"]
+            },
+            "fontSize": {
+                "label-md": ["14px", {"lineHeight": "16px", "letterSpacing": "0.01em", "fontWeight": "500"}],
+                "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                "headline-md": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+                "headline-lg-mobile": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                "body-lg": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                "label-sm": ["12px", {"lineHeight": "16px", "fontWeight": "600"}]
+            }
+          }
+        }
+      }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .education-timeline::before {
+            content: '';
+            position: absolute;
+            left: 11px;
+            top: 24px;
+            bottom: 0;
+            width: 2px;
+            background: repeating-linear-gradient(to bottom, #E2E8F0 0, #E2E8F0 4px, transparent 4px, transparent 8px);
+        }
+        .glass-header {
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-surface min-h-screen pb-32">
+<!-- Top App Bar -->
+<header class="fixed top-0 w-full z-50 flex justify-between items-center px-margin-mobile h-16 backdrop-blur-xl bg-surface/70 dark:bg-surface-dim/70">
+<div class="flex items-center gap-stack-md">
+<button class="material-symbols-outlined text-secondary hover:bg-surface-container-high p-2 rounded-full transition-colors" data-icon="arrow_back">arrow_back</button>
+<h1 class="font-headline-md text-headline-md font-bold text-secondary dark:text-secondary-fixed">Zero-Paper</h1>
+</div>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-secondary" data-icon="notifications">notifications</span>
+<div class="w-8 h-8 rounded-full bg-secondary-fixed flex items-center justify-center overflow-hidden border border-outline-variant">
+<img alt="User profile photo" class="w-full h-full object-cover" data-alt="A professional close-up portrait of a young computer science student with a friendly expression. The lighting is bright and clean, typical of a modern corporate office. The background is a soft-focus tech hub environment with clean lines and a cool-toned color palette of blues and grays, emphasizing a professional academic atmosphere." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBD0NkMxtuN62f3UqE5-YvPVLjCobBpcFNEALSX4CHvTUTCcsl2dRRuESmbdSd9DebWzt9xWxK-Y5EagpksJhfyfU6J_xo-HthxtA8cNYBQ3XYE3rwWn5DrSw8BmrOD1DErCPK5WEpJ1bg82DYC1vapBKsgHziKdEpFFdhC-YovujYmwGsl3I0t78rF5lCSSaC4GZOXDiQXq-7NJU2Lpk_c8mK8ZkADrFBsoWQOLrsGfHOcQxU9nBt5XODYEFvYf3cmZXyq1tki4THs"/>
+</div>
+</div>
+</header>
+<main class="mt-20 px-margin-mobile max-w-2xl mx-auto space-y-stack-lg">
+<!-- Progress Header -->
+<section class="bg-surface-container-lowest p-stack-lg rounded-xl border border-outline-variant shadow-sm">
+<div class="flex justify-between items-center mb-stack-md">
+<h2 class="font-headline-md text-headline-md-mobile md:text-headline-md text-on-surface">Education Details</h2>
+<span class="font-label-sm text-label-sm text-secondary bg-secondary-fixed px-3 py-1 rounded-full">Step 2 of 4</span>
+</div>
+<div class="w-full bg-surface-container-high h-2 rounded-full overflow-hidden">
+<div class="bg-secondary h-full w-1/2 rounded-full"></div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-stack-sm">Fill in your academic background to build your verified profile.</p>
+</section>
+<!-- Timeline Section -->
+<div class="relative education-timeline pl-8 space-y-stack-lg">
+<!-- University Section (Active) -->
+<section class="relative">
+<div class="absolute -left-8 top-1.5 w-6 h-6 bg-secondary rounded-full flex items-center justify-center z-10 border-4 border-surface ring-2 ring-secondary-fixed">
+<span class="material-symbols-outlined text-[14px] text-on-secondary" data-icon="school" data-weight="fill">school</span>
+</div>
+<div class="bg-surface-container-lowest border-2 border-secondary rounded-xl overflow-hidden shadow-md transition-all duration-300">
+<button class="w-full flex items-center justify-between p-stack-lg text-left" onclick="toggleSection('university-content', 'university-icon')">
+<div>
+<h3 class="font-headline-md text-headline-md text-on-surface">University</h3>
+<p class="font-label-sm text-label-sm text-secondary">Ongoing • Graduation 2024</p>
+</div>
+<span class="material-symbols-outlined transition-transform duration-300 rotate-180" data-icon="expand_more" id="university-icon">expand_more</span>
+</button>
+<div class="px-stack-lg pb-stack-lg space-y-stack-md block" id="university-content">
+<div class="space-y-stack-sm">
+<label class="font-label-sm text-label-sm text-on-surface-variant">Institution Name</label>
+<input class="w-full bg-surface-container-low border-none rounded-lg p-3 font-body-lg text-body-lg focus:ring-2 focus:ring-secondary/20 transition-all outline-none" type="text" value="Silicon Valley Institute of Technology"/>
+</div>
+<div class="grid grid-cols-2 gap-stack-md">
+<div class="space-y-stack-sm">
+<label class="font-label-sm text-label-sm text-on-surface-variant">Degree</label>
+<input class="w-full bg-surface-container-low border-none rounded-lg p-3 font-body-lg text-body-lg outline-none" type="text" value="Bachelor of Tech"/>
+</div>
+<div class="space-y-stack-sm">
+<label class="font-label-sm text-label-sm text-on-surface-variant">Branch</label>
+<input class="w-full bg-surface-container-low border-none rounded-lg p-3 font-body-lg text-body-lg outline-none" type="text" value="Computer Science"/>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-stack-md">
+<div class="space-y-stack-sm">
+<label class="font-label-sm text-label-sm text-on-surface-variant">Current CGPA</label>
+<input class="w-full bg-surface-container-low border-none rounded-lg p-3 font-body-lg text-body-lg outline-none" placeholder="e.g. 8.5" type="text"/>
+</div>
+<div class="space-y-stack-sm">
+<label class="font-label-sm text-label-sm text-on-surface-variant">Semester</label>
+<select class="w-full bg-surface-container-low border-none rounded-lg p-3 font-body-lg text-body-lg outline-none appearance-none">
+<option>7th Semester</option>
+<option>8th Semester</option>
+</select>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-stack-md">
+<div class="space-y-stack-sm">
+<label class="font-label-sm text-label-sm text-on-surface-variant">Start Year</label>
+<input class="w-full bg-surface-container-low border-none rounded-lg p-3 font-body-lg text-body-lg outline-none" type="number" value="2020"/>
+</div>
+<div class="space-y-stack-sm">
+<label class="font-label-sm text-label-sm text-on-surface-variant">End Year</label>
+<input class="w-full bg-surface-container-low border-none rounded-lg p-3 font-body-lg text-body-lg outline-none" type="number" value="2024"/>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Intermediate Section (Collapsed) -->
+<section class="relative">
+<div class="absolute -left-8 top-1.5 w-6 h-6 bg-surface-container-high rounded-full flex items-center justify-center z-10 border-4 border-surface">
+<span class="material-symbols-outlined text-[14px] text-on-surface-variant" data-icon="history_edu">history_edu</span>
+</div>
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-300">
+<button class="w-full flex items-center justify-between p-stack-lg text-left" onclick="toggleSection('intermediate-content', 'intermediate-icon')">
+<div>
+<h3 class="font-headline-md text-headline-md text-on-surface">Intermediate / Diploma</h3>
+<p class="font-label-sm text-label-sm text-on-surface-variant">MPC • Completed 2020</p>
+</div>
+<span class="material-symbols-outlined transition-transform duration-300" data-icon="expand_more" id="intermediate-icon">expand_more</span>
+</button>
+<div class="px-stack-lg pb-stack-lg space-y-stack-md hidden" id="intermediate-content">
+<div class="space-y-stack-sm">
+<label class="font-label-sm text-label-sm text-on-surface-variant">Junior College Name</label>
+<input class="w-full bg-surface-container-low border-none rounded-lg p-3 font-body-lg text-body-lg outline-none" placeholder="Enter college name" type="text"/>
+</div>
+<div class="grid grid-cols-2 gap-stack-md">
+<div class="space-y-stack-sm">
+<label class="font-label-sm text-label-sm text-on-surface-variant">Percentage/CGPA</label>
+<input class="w-full bg-surface-container-low border-none rounded-lg p-3 font-body-lg text-body-lg outline-none" placeholder="e.g. 96%" type="text"/>
+</div>
+<div class="space-y-stack-sm">
+<label class="font-label-sm text-label-sm text-on-surface-variant">Board</label>
+<input class="w-full bg-surface-container-low border-none rounded-lg p-3 font-body-lg text-body-lg outline-none" placeholder="e.g. CBSE" type="text"/>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Schooling Section (Collapsed) -->
+<section class="relative">
+<div class="absolute -left-8 top-1.5 w-6 h-6 bg-surface-container-high rounded-full flex items-center justify-center z-10 border-4 border-surface">
+<span class="material-symbols-outlined text-[14px] text-on-surface-variant" data-icon="menu_book">menu_book</span>
+</div>
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-300">
+<button class="w-full flex items-center justify-between p-stack-lg text-left" onclick="toggleSection('schooling-content', 'schooling-icon')">
+<div>
+<h3 class="font-headline-md text-headline-md text-on-surface">Schooling (10th)</h3>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Completed 2018</p>
+</div>
+<span class="material-symbols-outlined transition-transform duration-300" data-icon="expand_more" id="schooling-icon">expand_more</span>
+</button>
+<div class="px-stack-lg pb-stack-lg space-y-stack-md hidden" id="schooling-content">
+<div class="space-y-stack-sm">
+<label class="font-label-sm text-label-sm text-on-surface-variant">School Name</label>
+<input class="w-full bg-surface-container-low border-none rounded-lg p-3 font-body-lg text-body-lg outline-none" placeholder="Enter school name" type="text"/>
+</div>
+</div>
+</div>
+</section>
+</div>
+<!-- Sticky Bottom Actions -->
+<div class="fixed bottom-0 left-0 w-full p-margin-mobile glass-header bg-surface/80 border-t border-outline-variant md:relative md:bg-transparent md:border-none md:p-0 md:mt-12">
+<div class="max-w-2xl mx-auto flex gap-4">
+<button class="flex-1 py-4 px-6 rounded-full border-2 border-secondary text-secondary font-label-md transition-all hover:bg-secondary/5 active:scale-95">Save Draft</button>
+<button class="flex-[2] py-4 px-6 rounded-full bg-secondary text-on-secondary font-label-md shadow-lg shadow-secondary/20 transition-all hover:opacity-90 active:scale-95">Continue to Skills</button>
+</div>
+</div>
+</main>
+<!-- Navigation Bar (Hidden on Mobile Task Flow, but kept for context if needed by shell logic) -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-margin-mobile py-3 pb-safe bg-surface/70 backdrop-blur-xl border-t border-outline-variant hidden">
+<div class="flex flex-col items-center justify-center text-on-surface-variant px-5 py-1">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+<span class="font-label-sm text-label-sm">Home</span>
+</div>
+<div class="flex flex-col items-center justify-center bg-secondary-container text-on-secondary-container rounded-full px-5 py-1">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="font-label-sm text-label-sm">Profile</span>
+</div>
+</nav>
+<script>
+        function toggleSection(contentId, iconId) {
+            const content = document.getElementById(contentId);
+            const icon = document.getElementById(iconId);
+            
+            // Toggle visibility
+            if (content.classList.contains('hidden')) {
+                content.classList.remove('hidden');
+                content.classList.add('block');
+                icon.classList.add('rotate-180');
+            } else {
+                content.classList.add('hidden');
+                content.classList.remove('block');
+                icon.classList.remove('rotate-180');
+            }
+        }
+
+        // Interaction for input focus effects
+        document.querySelectorAll('input, select').forEach(el => {
+            el.addEventListener('focus', () => {
+                el.parentElement.classList.add('scale-[1.01]');
+            });
+            el.addEventListener('blur', () => {
+                el.parentElement.classList.remove('scale-[1.01]');
+            });
+        });
+    </script>
+</body></html>
